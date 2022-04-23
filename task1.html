@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment</title>
+	<h1>Task Assignment</h1>
+<style> 
+
+body{  
+  font-family: sans-serif;    
+    
+  padding: 10px; 
+  margin: 10px 50px 50px 50px; 
+  display: inline-block;  
+  border: none; 
+
+  box-sizing: border-box;
+} 
+
+
+
+input[type=text], input[type=tel], input[type=email], textarea {  
+   width: 100%;
+  padding: 15px;  
+  display: inline-block;  
+  margin: 10px 10px 10px 10px; 
+  border: none;  
+  background: #f1f1f1;  
+}  
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 15px; 
+   margin: 10px 10px 10px 10px; 
+  border: none;
+  width: 100%;
+}
+
+ 
+</style>
+	<script >
+		function operator(){
+			var name = document.getElementById("n1").value;
+			localStorage.setItem("name", name);
+			var roll_number = document.getElementById("n2").value;
+			localStorage.setItem("roll_number", roll_number);
+			var phone_number = document.getElementById("n3").value;
+			localStorage.setItem("phone_number", phone_number);
+			var email = document.getElementById("n4").value;
+			localStorage.setItem("email", email);
+			var address = document.getElementById("n5").value;
+			localStorage.setItem("address", address);
+			window.location.href= "new1.html";
+
+		}
+	</script>
+</head>
+<body>
+	<label>Name</label><br>
+	<input type="text" id="n1" name="name" placeholder="Enter Name" required="" ><br>
+	
+	<label>Roll Number</label><br>
+	<input type="text" id="n2" name="roll_number" placeholder="Enter Roll Number" required="" ><br>
+	
+	<label>Phone Number</label><br>
+	<input type="tel" name="Phone_Number" id="n3" placeholder="+92-000-0000000" pattern="[0-9,+]{3}-[0-9]{3}-[0-9]{7}" required=""><br>
+	
+	<label>Email</label><br>
+	<input type="email" id="n4" name="email" placeholder="someone@example.com" required="" ><br>
+	
+	<label> Address</label><br>
+	<textarea type="text" rows="4" cols="30" id="n5" name="address" required="" ></textarea>
+	<br><br>
+	<button class="btn" id="btn" onclick="{operator()}">Submit</button>
+
+</body>
+</html>

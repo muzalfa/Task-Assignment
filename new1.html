@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment</title>
+	<h1>Data</h1>
+	<style>  
+body{  
+	width: 80%;
+  font-family: sans-serif;   
+  padding: 100px;
+  margin: 10px 0 50px 0;  
+  display: inline-block;  
+  border: none; 
+}  
+
+ 
+</style>
+	<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Roll Number</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+    <th>Address</th>
+  </tr>
+  <tr>
+    <td><span id="text"></span></td>
+     <td><span id="text1"></span></td>
+      <td><span id="text2"></span></td>
+       <td><span id="text3"></span></td>
+        <td><span id="text4"></span></td>
+    </tr>
+ 
+</table>
+
+
+<script >
+	var getname= localStorage.getItem("name");
+	document.getElementById("text").innerHTML = getname;
+	var getroll_number= localStorage.getItem("roll_number");
+	document.getElementById("text1").innerHTML = getroll_number;
+	var getphone_number= localStorage.getItem("phone_number");
+	document.getElementById("text2").innerHTML = getphone_number;
+	var getemail= localStorage.getItem("email");
+	document.getElementById("text3").innerHTML = getemail;
+	var getaddress= localStorage.getItem("address");
+	document.getElementById("text4").innerHTML = getaddress;
+</script>
+</body>
+</html>
